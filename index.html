@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OnlyKidsAsmr</title>
+  <style>
+    body {
+      background-color: #cce7ff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    h1 {
+      background-color: #3399ff;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+    .buttons {
+      margin: 10px;
+    }
+    .themeButton {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff0000;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+    }
+    .langButton {
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #003366;
+    }
+    .video-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+    video {
+      border: 3px solid #003366;
+      border-radius: 10px;
+      width: 250px; /* compatto per griglia */
+    }
+    footer {
+      background-color: #3399ff;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .animal {
+      width: 50px;
+      position: absolute;
+      animation: float 6s infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Benvenuti su OnlyKidsAsmr!</h1>
+
+  <div class="buttons">
+    <button class="themeButton" onclick="changeTheme()">Tema 10-14 anni</button>
+    <button class="langButton" onclick="setLanguage('it')">🇮🇹 Italiano</button>
+    <button class="langButton" onclick="setLanguage('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- Animali decorativi -->
+  <img src="gatto.png" class="animal" style="top:50px; left:50px;">
+  <img src="cane.png" class="animal" style="top:100px; right:50px;">
+  <img src="coniglio.png" class="animal" style="top:200px; left:200px;">
+  <img src="uccellino.png" class="animal" style="top:150px; right:150px;">
+
+  <div class="video-container">
+    <!-- 20 Video Placeholder -->
+    <video controls><source src="video1.mp4" type="video/mp4"><!-- Primo video --></video>
+    <video controls><source src="video2.mp4" type="video/mp4"><!-- Secondo video --></video>
+    <video controls><source src="video3.mp4" type="video/mp4"><!-- Terzo video --></video>
+    <video controls><source src="video4.mp4" type="video/mp4"><!-- Quarto video --></video>
+    <video controls><source src="video5.mp4" type="video/mp4"><!-- Quinto video --></video>
+    <video controls><source src="video6.mp4" type="video/mp4"><!-- Sesto video --></video>
+    <video controls><source src="video7.mp4" type="video/mp4"><!-- Settimo video --></video>
+    <video controls><source src="video8.mp4" type="video/mp4"><!-- Ottavo video --></video>
+    <video controls><source src="video9.mp4" type="video/mp4"><!-- Nono video --></video>
+    <video controls><source src="video10.mp4" type="video/mp4"><!-- Decimo video --></video>
+    <video controls><source src="video11.mp4" type="video/mp4"><!-- Undicesimo video --></video>
+    <video controls><source src="video12.mp4" type="video/mp4"><!-- Dodicesimo video --></video>
+    <video controls><source src="video13.mp4" type="video/mp4"><!-- Tredicesimo video --></video>
+    <video controls><source src="video14.mp4" type="video/mp4"><!-- Quattordicesimo video --></video>
+    <video controls><source src="video15.mp4" type="video/mp4"><!-- Quindicesimo video --></video>
+    <video controls><source src="video16.mp4" type="video/mp4"><!-- Sedicesimo video --></video>
+    <video controls><source src="video17.mp4" type="video/mp4"><!-- Diciassettesimo video --></video>
+    <video controls><source src="video18.mp4" type="video/mp4"><!-- Diciottesimo video --></video>
+    <video controls><source src="video19.mp4" type="video/mp4"><!-- Diciannovesimo video --></video>
+    <video controls><source src="video20.mp4" type="video/mp4"><!-- Ventesimo video --></video>
+  </div>
+
+  <footer>
+    © 2025 OnlyKidsAsmr - Tutti i video sono sicuri per bambini
+  </footer>
+
+  <script>
+    function changeTheme() {
+      document.body.style.backgroundColor = "#000000";
+      document.body.style.color = "#ff0000";
+      document.querySelector('h1').style.backgroundColor = "#330000";
+      document.querySelector('footer').style.backgroundColor = "#330000";
+      let videos = document.querySelectorAll('video');
+      videos.forEach(v => v.style.border = "3px solid #ff0000");
+    }
+
+    function setLanguage(lang) {
+      if(lang === 'it') {
+        document.querySelector('h1').textContent = "Benvenuti su OnlyKidsAsmr!";
+        document.querySelector('footer').textContent = "© 2025 OnlyKidsAsmr - Tutti i video sono sicuri per bambini";
+        document.querySelector('.themeButton').textContent = "Tema 10-14 anni";
+      } else if(lang === 'en') {
+        document.querySelector('h1').textContent = "Welcome to OnlyKidsAsmr!";
+        document.querySelector('footer').textContent = "© 2025 OnlyKidsAsmr - All videos are safe for kids";
+        document.querySelector('.themeButton').textContent = "Theme 10-14 years";
+      }
+    }
+  </script>
+</body>
+</html>
